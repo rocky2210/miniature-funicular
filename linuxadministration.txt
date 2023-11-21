@@ -1,0 +1,95 @@
+Linux boot process
+    1.BOIS - The BOIS loads and executes the master boot record [MBR] boot loader
+    2.MBR  - MBR is responsible for loading and executing the GRUB boot loader
+    3.GRUB - GRUB is the typical boot loader for most modern linux system
+    4.Kernal - The Kernal is the core of any operating system, it has complete control over everything in your system
+    5.Init - At one point it would look for an init file, usually found at /etc/initab to decie the linux run level
+    6.Runlevel programs - Depending on the linux distribution you may be able to see different services getting started.
+
+Linux Shell
+
+Linux shell commands
+    pwd - Shows the current working directory
+    whomi - Displays the current username
+    history - Shows all the commands that have been used
+    date - Gives the present date
+    man - Gives a guide for a particular commands
+    who - Shows the user who logged in to the system
+    w - same as who but shows the processes as well
+    clear - clear the terminal
+    exit - exit and close the current terminal
+    mkdir - mkdir directory
+    rmdir - remove directory
+    find - find a file 
+    ls - list a files 
+    cat - print the containts of the file
+    cd - change directory
+    chmod - change permission
+    rm - delete
+    mv - move and rename file and directory
+    cp - copy file 
+    df - disk space
+    diff - difference between two files
+    grep - print the matches pattern
+    top and htop: Display a dynamic view of system processes.
+    chmod and chown: Change file permissions and ownership.
+    head and tail: Display the beginning or end of a file.
+    tar: Create or extract tar archives.
+    grep: Search for patterns in files.
+    scp and rsync: Copy files securely between machines.
+    nano or vim: Text editors for editing files.
+    uname: Display system information.
+
+
+File system
+                                                            root
+                                                            |
+    -----------------------------------------------------------------------------------------------------------------------------
+    |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+    bin     opt     boot    root    dev     sbin    etc     srv     home    tmp     lib     usr     media   var     mnt
+                                                                                            |                |
+                                                                        -------------------------         ------------------------
+                                                                        |       |       |       |         |      |       |       | 
+                                                                        bin     include lib    sbin     cache    log    spool    tmp   
+
+
+File permission
+    number          permission type         symbol
+    0               no permission            ---
+    1               executes                --x
+    2               write                   -w-
+    3               write & executes        -wx
+    4               read                    r--
+    5               read & executes         r-x
+    6               read & write            rw-
+    7               read, write,executes    rwx 
+
+Process and job control/Scheduling jobs
+    crontab -l
+
+Partitioning (Partition table, Partition type)
+
+        df 
+
+Package manager
+    apt - for ubuntu
+
+Processes
+    ps - shows current processes
+    kill - to kill the process 
+
+Process properties and child parent process
+    pstree
+    
+Networking:
+
+ifconfig or ip: Display and configure network interfaces. 
+ping and traceroute: Test network connectivity and trace routes.
+netstat and ss: Display network statistics.
+
+Users and Groups:
+useradd, userdel, groupadd, groupdel: Manage users and groups.
+System Logs:
+
+journalctl: Query and display messages from the journal.
+/var/log: Location of various system logs.
